@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07152e">
+
+<title>EXAMORO™ | Smart Study E-books</title>
+
+<meta name="description" content="Explore EXAMORO competitive exam e-books. RRB Group D PYQ Data Analysis e-book for ₹39. Plan Smart, Study Better, Crack Exam.">
+
+<style>
+:root {
+  --navy: #07152e;
+  --blue: #075878;
+  --red: #e51e2a;
+  --light: #f3f6f8;
+  --muted: #718096;
+  --green: #168b52;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202b3c;
+  background: #fff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* TOP BAR */
+
+.topbar {
+  background: var(--navy);
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.topbar a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 82px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -1px;
+}
+
+.brand-name span {
+  color: var(--red);
+}
+
+.brand-tagline {
+  color: #647187;
+  font-size: 9px;
+  margin-top: 5px;
+  letter-spacing: .3px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-button,
+.cart-button {
+  width: 43px;
+  height: 43px;
+  border: 1px solid #dfe5ed;
+  background: #f7f9fc;
+  border-radius: 10px;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 23px;
+  display: grid;
+  place-items: center;
+}
+
+.cart-button {
+  font-size: 19px;
+}
+
+.menu-button:hover,
+.cart-button:hover {
+  background: #eaf0f8;
+}
+
+/* MENU DRAWER */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: #07152e80;
+  opacity: 0;
+  visibility: hidden;
+  transition: .25s;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(340px, 88vw);
+  background: white;
+  z-index: 201;
+  transform: translateX(100%);
+  transition: .25s;
+  overflow-y: auto;
+  box-shadow: -10px 0 35px #0002;
+}
+
+.menu-drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-head {
+  background: var(--navy);
+  color: white;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer-head h2 {
+  font-size: 22px;
+}
+
+.close-menu {
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.drawer-links {
+  padding: 12px 0;
+}
+
+.drawer-links a,
+.drawer-links summary {
+  display: block;
+  padding: 13px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.drawer-links a:hover,
+.drawer-links summary:hover {
+  background: #f0f4f9;
+  color: var(--red);
+}
+
+.drawer-links details a {
+  padding-left: 40px;
+  font-weight: 500;
+}
+
+.drawer-divider {
+  border: 0;
+  border-top: 1px solid #e8edf3;
+  margin: 8px 20px;
+}
+
+.drawer-support {
+  margin: 15px;
+  background: #eaf8f0;
+  color: #126a3d;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.drawer-support p {
+  font-size: 12px;
+  margin: 5px 0 12px;
+}
+
+.drawer-support a {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* SEARCH */
+
+.search-section {
+  background: #f1f5f7;
+  padding: 18px 15px;
+  border-bottom: 1px solid #dce5e9;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.search-box input {
+  min-width: 0;
+  flex: 1;
+  padding: 14px 17px;
+  border: 1px solid #cfd9e0;
+  background: white;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px #07587815;
+}
+
+.search-box button {
+  background: var(--blue);
+  color: white;
+  border: 0;
+  border-radius: 12px;
+  padding: 0 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BROWSE */
+
+.browse-section {
+  background: #dce9ed;
+  padding: 17px 15px;
+  text-align: center;
+}
+
+.browse-button {
+  display: inline-block;
+  width: min(100%, 500px);
+  padding: 13px 20px;
+  border-radius: 12px;
+  background: var(--blue);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.browse-button:hover {
+  background: #06455e;
+}
+
+.category-list {
+  display: none;
+  max-width: 850px;
+  margin: 15px auto 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.category-list.open {
+  display: grid;
+}
+
+.category-list a {
+  background: white;
+  padding: 13px;
+  border: 1px solid #d7e0e8;
+  border-radius: 9px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.category-list a span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: normal;
+  margin-top: 3px;
+}
+
+/* COMMON SECTION */
+
+.section {
+  padding: 34px 0 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  padding: 0 22px 14px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #dce5e9;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  color: #303944;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* FEATURED BOOKS */
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 0 22px;
+}
+
+.book-card {
+  background: white;
+  border: 1px solid #e4eaf0;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 0;
+  transition: .2s;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #07152e12;
+}
+
+.book-cover-wrap {
+  background: #f4f7fa;
+  padding: 16px;
+  text-align: center;
+}
+
+.book-cover {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.book-info {
+  padding: 17px;
+}
+
+.book-category {
+  display: inline-block;
+  color: #b71924;
+  background: #fff0f1;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.book-title {
+  color: #075878;
+  font-size: 19px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.book-description {
+  color: #75808d;
+  font-size: 13px;
+  margin-bottom: 13px;
+}
+
+.book-features {
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+.book-features li {
+  font-size: 12px;
+  color: #455166;
+  margin: 7px 0;
+}
+
+.book-features li::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+.book-buy-row {
+  border-top: 1px solid #e8edf3;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  color: var(--red);
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.price-note {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.buy-button {
+  background: var(--red);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 13px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.buy-button:hover {
+  background: #bd1420;
+}
+
+.payment-note {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 13px;
+}
+
+/* SECONDARY STRIP */
+
+.brand-strip {
+  background: var(--navy);
+  color: white;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.brand-strip h2 {
+  font-size: 23px;
+  margin-bottom: 6px;
+}
+
+.brand-strip p {
+  color: #d3dcef;
+  font-size: 13px;
+}
+
+/* ABOUT AND POLICY PAGES */
+
+.info-page {
+  display: none;
+  min-height: 55vh;
+  padding: 40px 20px;
+  background: white;
+}
+
+.info-page.active {
+  display: block;
+}
+
+.info-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.info-content h1 {
+  color: var(--navy);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.info-content h2 {
+  color: var(--navy);
+  font-size: 19px;
+  margin: 20px 0 8px;
+}
+
+.info-content p,
+.info-content li {
+  font-size: 14px;
+  color: #526075;
+  margin-bottom: 10px;
+}
+
+.info-content ul {
+  padding-left: 22px;
+}
+
+.info-content a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+/* SUPPORT */
+
+.support {
+  background: #f2f7f5;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.support h2 {
+  color: var(--navy);
+  font-size: 24px;
+  margin-bottom: 7px;
+}
+
+.support p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 17px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 13px 20px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  background: #040c1b;
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  color: #c5d0e1;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #e2e8f0;
+  font-size: 12px;
+}
+
+.footer-links a:hover {
+  color: #ff626b;
+}
+
+.disclaimer {
+  max-width: 700px;
+  margin: 15px auto;
+  color: #aab6cc;
+  font-size: 10px;
+}
+
+.copyright {
+  color: #aab6cc;
+  font-size: 11px;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .navbar {
+    min-height: 72px;
+    padding: 9px 13px;
+  }
+
+  .brand-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .brand-tagline {
+    font-size: 7px;
+    letter-spacing: 0;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .menu-button,
+  .cart-button {
+    width: 39px;
+    height: 39px;
+    font-size: 21px;
+  }
+
+  .search-section {
+    padding: 14px 13px;
+  }
+
+  .search-box input {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .search-box button {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 27px 0 30px;
+  }
+
+  .section-heading {
+    padding: 0 15px 12px;
+    margin-bottom: 16px;
+  }
+
+  .section-heading h1,
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .book-cover-wrap {
+    padding: 8px;
+  }
+
+  .book-cover {
+    height: 190px;
+  }
+
+  .book-info {
+    padding: 11px;
+  }
+
+  .book-title {
+    font-size: 15px;
+  }
+
+  .book-description {
+    font-size: 11px;
+  }
+
+  .book-features li {
+    font-size: 10px;
+  }
+
+  .book-buy-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .price {
+    font-size: 23px;
+  }
+
+  .buy-button {
+    width: 100%;
+    padding: 11px 5px;
+    font-size: 11px;
+  }
+
+  .payment-note {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 360px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: auto;
+  }
+
+  .book-cover {
+    height: 300px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  EXAMORO E-BOOK STORE &nbsp; | &nbsp;
+  <a href="https://wa.me/919358915420" target="_blank" rel="noopener">
+    WhatsApp Support: 9358915420
+  </a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <nav class="navbar">
+
+    <a class="brand" href="#home" onclick="showHome()">
+      <img class="brand-logo"
+           src="logo.png"
+           alt="EXAMORO Logo">
+
+      <div>
+        <div class="brand-name">E<span>X</span>AMORO<sup style="font-size:9px">™</sup></div>
+        <div class="brand-tagline">
+          PLAN SMART • STUDY BETTER • CRACK EXAM
+        </div>
+      </div>
+    </a>
+
+    <div class="header-actions">
+      <a class="cart-button" href="#ebooks" aria-label="Browse e-books">🛒</a>
+      <button class="menu-button"
+              id="menuOpen"
+              aria-label="Open menu"
+              aria-expanded="false">☰</button>
+    </div>
+
+  </nav>
+</header>
+
+<!-- SLIDE MENU -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<aside class="menu-drawer" id="menuDrawer" aria-label="Website menu">
+  <div class="drawer-head">
+    <h2>EXAMORO Menu</h2>
+    <button class="close-menu" id="menuClose" aria-label="Close menu">×</button>
+  </div>
+
+  <div class="drawer-links">
+    <a href="#home" onclick="showHome()">🏠 Home</a>
+    <a href="#ebooks" onclick="showHome()">📚 All E-books</a>
+
+    <details>
+      <summary>📂 E-book Categories</summary>
+      <a href="#rrb-books" onclick="showHome()">🚆 Railway / RRB</a>
+      <a href="#ssc-category" onclick="showHome()">📋 SSC Exams</a>
+      <a href="#bank-category" onclick="showHome()">🏦 Banking Exams</a>
+      <a href="#upsc-category" onclick="showHome()">🎓 UPSC & State Exams</a>
+      <a href="#police-category" onclick="showHome()">👮 Police & Defence</a>
+    </details>
+
+    <hr class="drawer-divider">
+
+    <a href="#about" onclick="showPage('about')">ℹ️ About EXAMORO</a>
+    <a href="#contact" onclick="showHome()">💬 Contact / Help</a>
+    <a href="#privacy" onclick="showPage('privacy')">🔒 Privacy Policy</a>
+    <a href="#terms" onclick="showPage('terms')">📄 Terms & Conditions</a>
+    <a href="#refund" onclick="showPage('refund')">💳 Refund Policy</a>
+    <a href="#delivery" onclick="showPage('delivery')">📥 E-book Delivery</a>
+  </div>
+
+  <div class="drawer-support">
+    <strong>Need Help?</strong>
+    <p>Order ya e-book se related help ke liye WhatsApp karein.</p>
+    <a href="https://wa.me/919358915420?text=Hi%20EXAMORO%2C%20I%20need%20help."
+       target="_blank" rel="noopener">
+      WhatsApp Support
+    </a>
+  </div>
+</aside>
+
+<!-- SEARCH -->
+<div class="search-section">
+  <form class="search-box" id="searchForm">
+    <input id="bookSearch"
+           type="search"
+           placeholder="Search e-books, exams or topics..."
+           aria-label="Search e-books">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<!-- BROWSE -->
+<div class="browse-section">
+  <button class="browse-button" id="browseButton" type="button">
+    Browse E-book Categories ▾
+  </button>
+
+  <div class="category-list" id="categoryList">
+    <a href="#rrb-books">🚆 Railway / RRB
+      <span>RRB Group D study e-books</span>
+    </a>
+
+    <a href="#ssc-category">📋 SSC Exams
+      <span>SSC CGL, CHSL, MTS</span>
+    </a>
+
+    <a href="#bank-category">🏦 Banking
+      <span>Bank PO and Clerk</span>
+    </a>
+
+    <a href="#upsc-category">🎓 UPSC & State Exams
+      <span>Competitive exam resources</span>
+    </a>
+
+    <a href="#police-category">👮 Police & Defence
+      <span>Recruitment exam resources</span>
+    </a>
+  </div>
+</div>
+
+<main id="home">
+
+  <!-- FEATURED TITLES -->
+  <section class="section" id="ebooks">
+    <div class="container">
+
+      <div class="section-heading">
+        <h1>Featured E-books</h1>
+        <p>EXAMORO Smart Study Series</p>
+      </div>
+
+      <div class="books-grid" id="booksGrid">
+
+        <!-- MAIN BOOK -->
+        <article class="book-card"
+                 id="rrb-books"
+                 data-search="rrb group d railway pyq previous year question data analysis">
+
+          <div class="book-cover-wrap">
+            <img class="book-cover"
+                 src="rrb-group-d-analysis.png"
+                 alt="EXAMORO RRB Group D PYQ Data Analysis e-book cover">
+          </div>
+
+          <div class="book-info">
+            <span class="book-category">RAILWAY • RRB GROUP D</span>
+
+            <h2 class="book-title">
+              RRB Group D — PYQ Data Analysis
+            </h2>
+
+            <p class="book-description">
+              Previous 3–5 years ke PYQs ka topic-wise aur
+              trend-based analysis.
+            </p>
+
+            <ul class="book-features">
+              <li>Subject-wise question weightage</li>
+              <li>Topic-wise trend analysis</li>
+              <li>Recent exam pattern overview</li>
+              <li>Smart study priority guidance</li>
+            </ul>
+
+            <div class="book-buy-row">
+              <div class="price">
+                ₹39
+                <span class="price-note">One-time price</span>
+              </div>
+
+              <a class="buy-button"
+                 href="https://wa.me/919358915420?text=Hi%20EXAMORO%2C%20I%20want%20to%20buy%20the%20RRB%20Group%20D%20PYQ%20Data%20Analysis%20E-book%20for%20Rs%2039."
+                 target="_blank"
+                 rel="noopener">
+                BUY NOW · ₹39
+              </a>
+            </div>
+
+            <p class="payment-note">
+              Purchase assistance available on WhatsApp.
+              Online payment checkout will be enabled after payment setup.
+            </p>
+          </div>
+        </article>
+
+        <!-- FUTURE CATEGORIES: HIDDEN UNTIL YOU ADD REAL PRODUCTS -->
+
+        <article class="book-card"
+                 id="ssc-category"
+                 data-search="ssc cgl chsl mts"
+                 hidden>
+          <div class="book-info">
+            <span class="book-category">SSC EXAMS</span>
+            <h2 class="book-title">SSC Exam E-books</h2>
+            <p class="book-description">New e-books will be added here.</p>
+          </div>
+        </article>
+
+        <article class="book-card"
+                 id="bank-category"
+                 data-search="banking bank po clerk"
+                 hidden>
+          <div class="book-info">
+            <span class="book-category">BANKING</span>
+            <h2 class="book-title">Banking Exam E-books</h2>
+            <p class="book-description">New e-books will be added here.</p>
+          </div>
+        </article>
+
+        <article class="book-card"
+                 id="upsc-category"
+                 data-search="upsc state exams"
+                 hidden>
+          <div class="book-info">
+            <span class="book-category">UPSC & STATE</span>
+            <h2 class="book-title">UPSC & State Exam E-books</h2>
+            <p class="book-description">New e-books will be added here.</p>
+          </div>
+        </article>
+
+        <article class="book-card"
+                 id="police-category"
+                 data-search="police defence army"
+                 hidden>
+          <div class="book-info">
+            <span class="book-category">POLICE & DEFENCE</span>
+            <h2 class="book-title">Police & Defence E-books</h2>
+            <p class="book-description">New e-books will be added here.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="noResults"
+         style="display:none;text-align:center;padding:25px;color:#718096">
+        No matching e-books found. Try another search.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- BRAND MESSAGE -->
+  <section class="brand-strip">
+    <h2>ज्यादा मत पढ़ो, सही पढ़ो!</h2>
+    <p>Plan Smart | Study Better | Crack Exam</p>
+  </section>
+
+  <!-- INFO PAGES -->
+
+  <section class="info-page" id="about">
+    <div class="info-content">
+      <h1>About EXAMORO</h1>
+      <p>
+        EXAMORO is an independent educational study-material brand
+        focused on helping competitive-exam aspirants study with
+        a clearer plan through digital e-books.
+      </p>
+      <p>
+        Our motto is: “Plan Smart | Study Better | Crack Exam”.
+        We aim to make useful study resources easy to discover
+        and access.
+      </p>
+      <p>
+        EXAMORO is not affiliated with or endorsed by Indian Railways
+        or any government department.
+      </p>
+      <a href="#ebooks" onclick="showHome()">Browse E-books →</a>
+    </div>
+  </section>
+
+  <section class="info-page" id="privacy">
+    <div class="info-content">
+      <h1>Privacy Policy</h1>
+      <p><strong>Last updated:</strong> October 2026</p>
+
+      <h2>Information</h2>
+      <p>
+        When you contact EXAMORO, you may voluntarily share your
+        name, contact details, order information or payment reference
+        so we can help with your purchase.
+      </p>
+
+      <h2>Ho
