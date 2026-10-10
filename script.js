@@ -1,230 +1,139 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const getElement = (id) => document.getElementById(id);
+/* ==========================================================================
+   EXAMORO™ ENGINE MANAGEMENT LOGIC SYSTEM (script.js)
+   ========================================================================== */
 
-  // DARK / LIGHT MODE
-  const themeToggle = getElement("themeToggle");
+const menuOpenBtn = document.getElementById('menuOpen');
+const menuCloseBtn = document.getElementById('menuClose');
+const menuOverlay = document.getElementById('menuOverlay');
+const menuDrawer = document.getElementById('menuDrawer');
+const browseButton = document.getElementById('browseButton');
+const categoryList = document.getElementById('categoryList');
+const searchForm = document.getElementById('searchForm');
+const bookSearchInput = document.getElementById('bookSearch');
+const noResultsMessage = document.getElementById('noResults');
+const themeToggle = document.getElementById('themeToggle');
+const salesAlert = document.getElementById('salesAlert');
+const salesAlertText = document.getElementById('salesAlertText');
 
-  function applyTheme(theme) {
-    const isDark = theme === "dark";
-
-    document.body.classList.toggle("dark-theme", isDark);
-
-    if (themeToggle) {
-      themeToggle.textContent = isDark ? "☀️" : "🌙";
-      themeToggle.setAttribute(
-        "aria-label",
-        isDark ? "Switch to light mode" : "Switch to dark mode"
-      );
-      themeToggle.setAttribute("aria-pressed", String(isDark));
-    }
-
-    try {
-      localStorage.setItem("examoro-theme", theme);
-    } catch (error) {}
-  }
-
-  let savedTheme = "light";
-
-  try {
-    savedTheme = localStorage.getItem("examoro-theme") || "light";
-  } catch (error) {}
-
-  applyTheme(savedTheme);
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-      const isDark = document.body.classList.contains("dark-theme");
-      applyTheme(isDark ? "light" : "dark");
-    });
-  }
-
-  // MOBILE NAVIGATION DRAWER
-  const menuToggle = getElement("menuToggle");
-  const drawer = getElement("drawer");
-  const drawerOverlay = getElement("drawerOverlay");
-  const closeDrawerButton = getElement("closeDrawer");
-
-  function openDrawer() {
-    if (!drawer || !drawerOverlay) return;
-
-    drawer.classList.add("open");
-    drawerOverlay.classList.add("active");
-    document.body.classList.add("drawer-open");
-
-    if (menuToggle) {
-      menuToggle.setAttribute("aria-expanded", "true");
-    }
-  }
-
-  function closeDrawer() {
-    if (!drawer || !drawerOverlay) return;
-
-    drawer.classList.remove("open");
-    drawerOverlay.classList.remove("active");
-    document.body.classList.remove("drawer-open");
-
-    if (menuToggle) {
-      menuToggle.setAttribute("aria-expanded", "false");
-    }
-  }
-
-  if (menuToggle) {
-    menuToggle.addEventListener("click", openDrawer);
-  }
-
-  if (closeDrawerButton) {
-    closeDrawerButton.addEventListener("click", closeDrawer);
-  }
-
-  if (drawerOverlay) {
-    drawerOverlay.addEventListener("click", closeDrawer);
-  }
-
-  if (drawer) {
-    drawer.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", closeDrawer);
-    });
-  }
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      closeDrawer();
-      closeIndexModal();
+// 1. 🌙 DARK MODE SAVING CONSOLE (पॉइंट 20 - छात्र की पसंद याद रखना)
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-theme');
+  if (themeToggle) themeToggle.textContent = '☀️';
+}
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    if (document.body.classList.contains('dark-theme')) {
+      themeToggle.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      themeToggle.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
     }
   });
+}
 
-  // TOAST MESSAGE
-  const toastMessage = getElement("toastMessage");
-  let toastTimer;
-
-  function showToast(message) {
-    if (!toastMessage) return;
-
-    toastMessage.textContent = message;
-    toastMessage.classList.add("show");
-
-    clearTimeout(toastTimer);
-
-    toastTimer = setTimeout(function () {
-      toastMessage.classList.remove("show");
-    }, 3000);
-  }
-
-  // INDEX PREVIEW MODAL
-  const indexModal = getElement("indexModal");
-  const modalTitle = getElement("modalTitle");
-  const closeIndexButton = getElement("closeIndexModal");
-  const closeIndexBottom = getElement("closeIndexModalBottom");
-
-  function openIndexModal(bookName) {
-    if (!indexModal) return;
-
-    if (modalTitle && bookName) {
-      modalTitle.textContent = bookName;
-    }
-
-    indexModal.classList.add("active");
-    indexModal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("modal-open");
-  }
-
-  function closeIndexModal() {
-    if (!indexModal) return;
-
-    indexModal.classList.remove("active");
-    indexModal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("modal-open");
-  }
-
-  document.querySelectorAll(".viewIndex").forEach(function (button) {
-    button.addEventListener("click", function () {
-      const bookName = button.dataset.book || "EXAMORO™ Smart Series";
-      openIndexModal(bookName);
-    });
-  });
-
-  if (closeIndexButton) {
-    closeIndexButton.addEventListener("click", closeIndexModal);
-  }
-
-  if (closeIndexBottom) {
-    closeIndexBottom.addEventListener("click", closeIndexModal);
-  }
-
-  if (indexModal) {
-    indexModal.addEventListener("click", function (event) {
-      if (event.target === indexModal) {
-        closeIndexModal();
-      }
-    });
-  }
-
-  // BUY NOW BUTTONS
-  document.querySelectorAll(".buyNow").forEach(function (button) {
-    button.addEventListener("click", function () {
-      const bookName = button.dataset.book || "E-book";
-
-      showToast(
-        bookName + " की खरीदारी के लिए WhatsApp पर संपर्क करें।"
-      );
-
-      setTimeout(function () {
-        window.open(
-          "https://wa.me/919358915420?text=" +
-            encodeURIComponent(
-              "नमस्ते EXAMORO, मुझे " +
-                bookName +
-                " के बारे में जानकारी चाहिए।"
-            ),
-          "_blank",
-          "noopener"
-        );
-      }, 500);
-    });
-  });
-
-  // COMING SOON BUTTON
-  document.querySelectorAll(".notifyButton").forEach(function (button) {
-    button.addEventListener("click", function () {
-      showToast("नई Smart Series की जानकारी जल्द उपलब्ध होगी!");
-    });
-  });
-
-  // CART BUTTON
-  const cartButton = getElement("cartButton");
-
-  if (cartButton) {
-    cartButton.addEventListener("click", function () {
-      showToast("खरीदारी के लिए अपनी पसंद की E-book चुनें।");
-    });
-  }
-
-  // CURRENT YEAR
-  const currentYear = getElement("currentYear");
-
-  if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-  }
-
-  // SMOOTH SCROLLING
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      const targetId = link.getAttribute("href");
-
-      if (!targetId || targetId === "#") return;
-
-      const target = document.querySelector(targetId);
-
-      if (target) {
-        event.preventDefault();
-
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-        closeDrawer();
-      }
-    });
-  });
+// 2. 🚨 ANTI-PIRACY SECURITY HANDLERS (पॉइंट 21 - चोरी से सुरक्षा लॉक)
+document.addEventListener('contextmenu', e => e.preventDefault()); // राइट क्लिक ब्लॉक
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'p')) e.preventDefault(); // सोर्स कोड और कॉपी ब्लॉक
 });
+
+// 3. 📱 NAV ROUTING MANAGEMENT (मेन्यू ओपन-क्लोज और होम रीसेट)
+function openMenu() { if (menuDrawer && menuOverlay) { menuDrawer.classList.add('open'); menuOverlay.classList.add('open'); } }
+function closeMenu() { if (menuDrawer && menuOverlay) { menuDrawer.classList.remove('open'); menuOverlay.classList.remove('open'); } }
+if (menuOpenBtn) menuOpenBtn.addEventListener('click', openMenu);
+if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+
+function showHome() {
+  document.querySelectorAll('.info-page').forEach(p => p.style.display = 'none');
+  const homeView = document.getElementById('home');
+  if (homeView) homeView.style.display = 'block';
+  document.querySelectorAll('.book-card').forEach(c => { if (!c.hasAttribute('hidden')) c.style.display = 'block'; });
+  if (noResultsMessage) noResultsMessage.style.display = 'none';
+  if (bookSearchInput) bookSearchInput.value = '';
+  closeMenu();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function triggerCategoryRoute(keyword) {
+  showHome();
+  if (bookSearchInput) { bookSearchInput.value = keyword; performSearch(); }
+  closeMenu();
+}
+
+function showPage(pageId) {
+  const homeView = document.getElementById('home');
+  if (homeView) homeView.style.display = 'none';
+  document.querySelectorAll('.info-page').forEach(p => p.style.display = 'none');
+  const target = document.getElementById(pageId);
+  if (target) { target.style.display = 'block'; window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  closeMenu();
+}
+
+if (browseButton && categoryList) { browseButton.addEventListener('click', () => categoryList.classList.toggle('open')); }
+
+// 4. 📄 PREVIEW GALLERY CONSOLE (पॉइंट 16 - विषय-सूची ज़ूमर मोड)
+window.openPreview = function(src) {
+  const modal = document.getElementById('previewModal');
+  const modalImg = document.getElementById('modalImg');
+  if (modal && modalImg) { modal.style.display = 'grid'; modalImg.src = src; }
+}
+window.closePreview = function() { const modal = document.getElementById('previewModal'); if (modal) modal.style.display = 'none'; }
+
+// 5. 🔍 CLIENT SIDE FILTER ENGINE (पॉइंट 18 - कमिंग सून सर्च फ़िल्टर)
+function performSearch() {
+  const filter = bookSearchInput.value.toLowerCase().trim();
+  const bookCards = document.querySelectorAll('.book-card');
+  let visibleCount = 0;
+
+  bookCards.forEach(card => {
+    if (!card.hasAttribute('hidden')) {
+      const searchKeywords = card.getAttribute('data-search') || '';
+      const titleText = card.querySelector('.book-title')?.textContent || '';
+      const categoryText = card.querySelector('.book-category')?.textContent || '';
+      const combinedText = (searchKeywords + ' ' + titleText + ' ' + categoryText).toLowerCase();
+
+      if (combinedText.includes(filter)) { card.style.display = 'block'; visibleCount++; }
+      else { card.style.display = 'none'; }
+    }
+  });
+  if (noResultsMessage) noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+}
+if (bookSearchInput) bookSearchInput.addEventListener('input', performSearch);
+if (searchForm) { searchForm.addEventListener('submit', e => { e.preventDefault(); performSearch(); }); }
+
+// 6. 🔔 MULTI-REGION SALES NOTIFICATION (पॉइंट 19 - लाइव बिक्री अलर्ट)
+const users = ["अमित (उत्तर प्रदेश)", "रोहित (राजस्थान)", "विक्रम (बिहार)", "दीपक (मध्य प्रदेश)", "संदीप (हरियाणा)", "मनीष (पंजाब)", "राहुल (झारखंड)", "संजय (गुजरात)"];
+function triggerSalesAlert() {
+  if (salesAlertText && salesAlert) {
+    const randomUser = users[Math.floor(Math.random() * users.length)];
+    salesAlertText.innerHTML = `🔥 <strong>${randomUser}</strong> ne abhi-abhi RRB Group D Data Analysis E-book kharidi! ⚡`;
+    salesAlert.classList.add('show');
+    setTimeout(() => { salesAlert.classList.remove('show'); }, 4000);
+  }
+}
+// पहली बार पेज खुलने पर 5 सेकंड बाद अलर्ट दिखाएं, फिर हर 35 सेकंड में रिपीट करें
+setTimeout(() => {
+  triggerSalesAlert();
+  setInterval(triggerSalesAlert, 35000);
+}, 5000);
+
+// 7. 📥 PWA LIVING WEB ENGINE (पॉइंट 9 - मोबाइल होमस्क्रीन ऐप इंस्टॉल)
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault(); deferredPrompt = e;
+  const pwaBtn = document.getElementById('pwaInstall');
+  if (pwaBtn) pwaBtn.style.display = 'block';
+});
+const pwaBtn = document.getElementById('pwaInstall');
+if (pwaBtn) {
+  pwaBtn.addEventListener('click', (e) => {
+    e.preventDefault(); pwaBtn.style.display = 'none';
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+    }
+  });
+}
