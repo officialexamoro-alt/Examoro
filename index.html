@@ -1,534 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="EXAMORO Smart Store - Smart exam preparation e-books. Plan Smart, Study Better, Crack Exam.">
-  <meta name="theme-color" content="#ffffff">
-
-  <title>EXAMORO™ | Smart Study Store</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<div class="announcement">
-  🔥 EXAMORO™ Smart Store
-  <span>•</span>
-  <a href="https://wa.me/919358915420" target="_blank" rel="noopener noreferrer">
-    🟢 WhatsApp: 9358915420
-  </a>
-</div>
-
-<header class="navbar">
-
-  <a href="#home" class="brand">
-    <span class="logo">E<span class="red">X</span>AMORO<sup>™</sup></span>
-    <small>PLAN SMART • STUDY BETTER • CRACK EXAM</small>
-  </a>
-
-  <nav class="desktop-menu">
-    <a href="#home">Home</a>
-    <a href="#books">E-books</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="nav-actions">
-    <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
-    <button id="cartButton" class="icon-btn" aria-label="View books">🛒</button>
-    <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
-  </div>
-
-</header>
-
-<div class="drawer-overlay" id="drawerOverlay"></div>
-
-<aside class="drawer" id="drawer">
-
-  <div class="drawer-header">
-    <strong>EXAMORO™</strong>
-    <button id="closeDrawer" class="icon-btn" aria-label="Close menu">✕</button>
-  </div>
-
-  <a href="#home">🏠 Home Page</a>
-
-  <details>
-    <summary>📚 All E-books</summary>
-    <a href="#books">↳ Smart Series E-books</a>
-    <a href="#rrb-book">↳ RRB Group D</a>
-    <p>↳ SSC / Banking / UPSC / Police — Coming Soon</p>
-  </details>
-
-  <a href="#about">💙 About Us</a>
-  <a href="#contact">💬 Contact Us</a>
-  <a href="#social">🌈 Social Media</a>
-
-</aside>
-
-<main>
-
-<section class="hero section" id="home">
-
-  <div class="hero-content">
-
-    <span class="eyebrow">✨ SMART PREPARATION STARTS HERE</span>
-
-    <h1>
-      Study Smart.<br>
-      <span>Prepare Better.</span><br>
-      Crack Your Goal.
-    </h1>
-
-    <p>
-      Focused exam preparation e-books to help you study
-      with direction, revise smarter and stay organised.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#books" class="btn btn-red">Explore E-books →</a>
-      <a href="#about" class="btn btn-outline">Know About Us</a>
-    </div>
-
-    <div class="hero-features">
-
-      <div class="feature">
-        <span class="soft-icon blue-bg">📘</span>
-        <div>
-          <strong>Focused Content</strong>
-          <small>Study with direction</small>
-        </div>
-      </div>
-
-      <div class="feature">
-        <span class="soft-icon green-bg">🎯</span>
-        <div>
-          <strong>Smart Approach</strong>
-          <small>Learn what matters</small>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="hero-art">
-
-    <div class="floating-note note-top">
-      ⚡
-      <span>
-        <b>Smart Series</b>
-        <small>Learn with focus</small>
-      </span>
-    </div>
-
-    <div class="hero-book">
-      <div class="book-brand">EXAMORO™</div>
-      <div class="book-label">RRB GROUP D</div>
-      <h2>PYQ DATA<br><span>ANALYSIS</span></h2>
-      <div class="book-line"></div>
-      <p>FOCUSED PRACTICE<br>SMARTER REVISION</p>
-      <div class="book-symbols">✦　▤　✓</div>
-      <small>PLAN SMART • STUDY BETTER</small>
-    </div>
-
-    <div class="floating-note note-bottom">
-      💰
-      <span>
-        <b>Budget Friendly</b>
-        <small>Book price just ₹39</small>
-      </span>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="benefits section">
-
-  <div class="benefit-card">
-    <span class="soft-icon blue-bg">📖</span>
-    <div>
-      <h3>Clear & Focused</h3>
-      <p>Keep your preparation organised.</p>
-    </div>
-  </div>
-
-  <div class="benefit-card">
-    <span class="soft-icon red-bg">💡</span>
-    <div>
-      <h3>Smart Learning</h3>
-      <p>Make your study time count.</p>
-    </div>
-  </div>
-
-  <div class="benefit-card">
-    <span class="soft-icon green-bg">📱</span>
-    <div>
-      <h3>Digital Access</h3>
-      <p>Study on your preferred device.</p>
-    </div>
-  </div>
-
-</section>
-
-<section class="section books-section" id="books">
-
-  <div class="section-heading">
-    <div>
-      <span class="eyebrow">📚 OUR COLLECTION</span>
-      <h2>Choose Your <span>Smart Study</span></h2>
-      <p>Start with our first Smart Series e-book.</p>
-    </div>
-
-    <span class="series-badge">📘 Smart Series</span>
-  </div>
-
-  <article class="book-card" id="rrb-book">
-
-    <div class="book-art">
-      <span class="top-badge">SMART SERIES</span>
-
-      <div class="product-book">
-        <div class="product-brand">EXAMORO™</div>
-        <span class="product-exam">RRB GROUP D</span>
-        <h2>PYQ DATA<br><span>ANALYSIS</span></h2>
-        <div class="book-line"></div>
-        <p>PLAN SMART • STUDY BETTER</p>
-        <div class="book-symbols">✦　▤　✓</div>
-      </div>
-    </div>
-
-    <div class="book-info">
-
-      <span class="category-label">RRB GROUP D • E-BOOK</span>
-
-      <h2>RRB Group D — PYQ Data Analysis</h2>
-
-      <p class="description">
-        A focused digital study resource to help organise
-        your RRB Group D previous-year-question analysis
-        and revision.
-      </p>
-
-      <div class="book-points">
-        <span>✅ Digital e-book</span>
-        <span>✅ Topic-focused revision</span>
-        <span>✅ Budget-friendly price</span>
-        <span>✅ Index preview available</span>
-      </div>
-
-      <div class="price-row">
-        <div>
-          <strong class="price">₹39</strong>
-          <small>One-time price</small>
-        </div>
-        <span class="price-badge">SMART PRICE</span>
-      </div>
-
-      <div class="book-buttons">
-        <button class="btn btn-red" id="buyNow">Buy Now →</button>
-        <button class="btn btn-outline" id="viewIndex">📑 View Full Index</button>
-      </div>
-
-      <p class="payment-note">
-        Online payment will be enabled after secure payment integration.
-      </p>
-
-    </div>
-
-  </article>
-
-  <div class="coming-section">
-
-    <span class="eyebrow">🚀 MORE ON THE WAY</span>
-    <h2>Coming <span>Soon</span></h2>
-
-    <div class="category-grid">
-
-      <div class="category-card">
-        <span class="soft-icon lavender-bg">🧠</span>
-        <h3>SSC Exams</h3>
-        <small>Coming Soon</small>
-      </div>
-
-      <div class="category-card">
-        <span class="soft-icon peach-bg">🏦</span>
-        <h3>Banking</h3>
-        <small>Coming Soon</small>
-      </div>
-
-      <div class="category-card">
-        <span class="soft-icon blue-bg">🎓</span>
-        <h3>UPSC</h3>
-        <small>Coming Soon</small>
-      </div>
-
-      <div class="category-card">
-        <span class="soft-icon green-bg">👮</span>
-        <h3>Police Exams</h3>
-        <small>Coming Soon</small>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="section about-section" id="about">
-
-  <div class="section-heading">
-    <span class="eyebrow">GET TO KNOW US</span>
-    <h2>About <span class="text-blue">EXAMOR</span><span class="text-red">O</span></h2>
-    <p>ज्यादा मत पढ़ो, सही पढ़ो!</p>
-  </div>
-
-  <div class="about-card">
-    <div class="about-icon">🎯</div>
-    <h3>हमारे बारे में | About Us</h3>
-
-    <p>
-      EXAMORO™ एक स्वतंत्र educational brand है, जिसका उद्देश्य
-      प्रतियोगी परीक्षाओं की तैयारी करने वाले विद्यार्थियों को
-      उपयोगी और व्यवस्थित अध्ययन सामग्री उपलब्ध कराना है।
-    </p>
-
-    <p>
-      हम उपलब्ध जानकारी और प्रश्नों का विश्लेषण करके विद्यार्थियों
-      को स्मार्ट तरीके से तैयारी करने में मदद करने का प्रयास करते हैं।
-    </p>
-
-    <p>
-      EXAMORO किसी भी सरकारी विभाग या परीक्षा आयोजित करने वाली
-      संस्था से संबद्ध नहीं है।
-    </p>
-  </div>
-
-  <div class="accordion-group">
-
-    <details class="accordion-item">
-      <summary>📚 हमारी Smart Series के बारे में</summary>
-      <div class="accordion-content">
-        <p>
-          हमारी Smart Series का उद्देश्य परीक्षा की तैयारी को
-          आसान, व्यवस्थित और उपयोगी बनाना है।
-        </p>
-        <p>
-          फिलहाल हमारी पहली उपलब्ध पुस्तक RRB Group D — PYQ Data
-          Analysis है। SSC, Banking, UPSC और Police की सामग्री
-          भविष्य में उपलब्ध कराई जा सकती है।
-        </p>
-      </div>
-    </details>
-
-    <details class="accordion-item">
-      <summary>🤝 Help & Support</summary>
-      <div class="accordion-content">
-        <p>पुस्तक खरीदने या डिजिटल सामग्री से संबंधित सहायता के लिए संपर्क करें।</p>
-        <p>
-          WhatsApp:
-          <a href="https://wa.me/919358915420" target="_blank" rel="noopener noreferrer">9358915420</a>
-        </p>
-        <p>
-          Email:
-          <a href="mailto:officialexamoro@gmail.com">officialexamoro@gmail.com</a>
-        </p>
-      </div>
-    </details>
-
-    <details class="accordion-item" id="privacy">
-      <summary>🔒 Privacy Policy</summary>
-      <div class="accordion-content">
-        <p>
-          EXAMORO आपकी गोपनीयता का सम्मान करता है। हम वेबसाइट
-          और ग्राहक सहायता के लिए आवश्यक जानकारी का ही उपयोग
-          करने का प्रयास करते हैं।
-        </p>
-        <p>
-          आपकी जानकारी को अनधिकृत पहुँच से सुरक्षित रखने के लिए
-          उचित कदम उठाए जाएंगे।
-        </p>
-        <p>
-          भुगतान प्रदाता के माध्यम से किए गए भुगतान उनकी
-          संबंधित गोपनीयता नीतियों के अधीन भी होंगे।
-        </p>
-        <p>
-          हम आपकी व्यक्तिगत जानकारी बेचने का इरादा नहीं रखते।
-          सवालों के लिए हमसे संपर्क करें।
-        </p>
-        <p>
-          <a href="mailto:officialexamoro@gmail.com">officialexamoro@gmail.com</a>
-        </p>
-      </div>
-    </details>
-
-    <details class="accordion-item" id="refund">
-      <summary>💳 Refund Policy</summary>
-      <div class="accordion-content">
-        <p>
-          डिजिटल ई-बुक का एक्सेस मिलने के बाद सामान्यतः रिफंड
-          उपलब्ध नहीं हो सकता, जहाँ लागू कानून इसकी अनुमति देता हो।
-        </p>
-        <p>
-          गलत या दोहरे भुगतान अथवा तकनीकी समस्या की स्थिति में
-          हमसे संपर्क करें। प्रत्येक मामले की जाँच लागू कानून
-          और भुगतान प्रदाता की शर्तों के अनुसार की जाएगी।
-        </p>
-        <p>
-          WhatsApp:
-          <a href="https://wa.me/919358915420" target="_blank" rel="noopener noreferrer">9358915420</a>
-        </p>
-        <p>
-          Email:
-          <a href="mailto:officialexamoro@gmail.com">officialexamoro@gmail.com</a>
-        </p>
-      </div>
-    </details>
-
-  </div>
-
-</section>
-
-<section class="section contact-section" id="contact">
-
-  <div class="section-heading">
-    <span class="eyebrow">WE ARE HERE TO HELP</span>
-    <h2>Contact <span class="text-blue">Us</span></h2>
-    <p>कोई सवाल है? हमसे संपर्क करें।</p>
-  </div>
-
-  <div class="contact-grid">
-
-    <a class="contact-card"
-       href="https://wa.me/919358915420"
-       target="_blank" rel="noopener noreferrer">
-      <span class="contact-icon">💬</span>
-      <h3>WhatsApp Support</h3>
-      <p>9358915420</p>
-      <span class="contact-action">Chat with us ↗</span>
-    </a>
-
-    <a class="contact-card" href="mailto:officialexamoro@gmail.com">
-      <span class="contact-icon">✉️</span>
-      <h3>Email Support</h3>
-      <p>officialexamoro@gmail.com</p>
-      <span class="contact-action">Send Email ↗</span>
-    </a>
-
-  </div>
-
-</section>
-
-<section class="section social-section" id="social">
-
-  <div class="section-heading">
-    <span class="eyebrow">STAY CONNECTED</span>
-    <h2>Follow <span class="text-blue">EXAMORO</span></h2>
-    <p>नई अपडेट और आने वाली पुस्तकों की जानकारी के लिए जुड़े रहें।</p>
-  </div>
-
-  <div class="social-links">
-
-    <a href="https://www.instagram.com/"
-       target="_blank" rel="noopener noreferrer"
-       class="social-button instagram">
-      📸 Instagram ↗
-    </a>
-
-    <a href="https://www.youtube.com/"
-       target="_blank" rel="noopener noreferrer"
-       class="social-button youtube">
-      ▶️ YouTube ↗
-    </a>
-
-    <a href="https://wa.me/919358915420"
-       target="_blank" rel="noopener noreferrer"
-       class="social-button whatsapp">
-      💬 WhatsApp ↗
-    </a>
-
-  </div>
-
-</section>
-
-</main>
-
-<footer class="site-footer">
-
-  <div class="footer-brand">
-    <span class="brand-name">EXAMOR<span class="text-red">O</span><sup>™</sup></span>
-    <p>PLAN SMART • STUDY BETTER • CRACK EXAM</p>
-  </div>
-
-  <p class="footer-slogan">ज्यादा मत पढ़ो, सही पढ़ो!</p>
-
-  <div class="footer-links">
-    <a href="#about">About Us</a>
-    <a href="#privacy">Privacy Policy</a>
-    <a href="#refund">Refund Policy</a>
-    <a href="#contact">Contact Us</a>
-  </div>
-
-  <p class="footer-disclaimer">
-    EXAMORO™ एक स्वतंत्र educational brand है और किसी सरकारी
-    विभाग, रेलवे या परीक्षा आयोजित करने वाली संस्था से संबद्ध
-    नहीं है। सभी परीक्षा नाम संबंधित संस्थाओं के हैं।
-  </p>
-
-  <p class="copyright">
-    © <span id="currentYear">2026</span> EXAMORO™. All rights reserved.
-  </p>
-
-</footer>
-
-<div class="modal-overlay" id="indexModal" aria-hidden="true">
-
-  <div class="modal-box"
-       role="dialog"
-       aria-modal="true"
-       aria-labelledby="indexModalTitle">
-
-    <button type="button" class="modal-close" id="closeIndexModal" aria-label="Close preview">
-      &times;
-    </button>
-
-    <span class="eyebrow">BOOK PREVIEW</span>
-
-    <h2 id="indexModalTitle">RRB Group D — PYQ Data Analysis</h2>
-
-    <p class="modal-subtitle">विषय-सूची | Index Preview</p>
-
-    <div class="index-preview-content">
-      <p>📘 पुस्तक का परिचय</p>
-      <p>📊 PYQ Data Analysis</p>
-      <p>📝 विषयवार प्रश्नों का विश्लेषण</p>
-      <p>🎯 परीक्षा की तैयारी के लिए उपयोगी बिंदु</p>
-      <p>📚 अभ्यास और रिवीजन सामग्री</p>
-    </div>
-
-    <p class="index-note">
-      यह सामान्य प्रीव्यू है। इसे पुस्तक की वास्तविक विषय-सूची
-      के अनुसार अपडेट करें।
-    </p>
-
-    <button type="button" class="btn btn-primary" id="closeIndexModalBottom">
-      समझ गया
-    </button>
-
-  </div>
-
-</div>
-
-<div class="toast-message" id="toastMessage" role="status" aria-live="polite"></div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+<html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EXAMORO - PYQ Analysis E Book</title>
+<meta name="description" content="भारत की सभी प्रतियोगी परीक्षाओं के पिछले 3 से 5 साल के पेपर्स का सटीक टॉपिक-वाइज और ट्रेंड एनालिसिस। EXAMORO Smart Study Series के साथ परीक्षा क्रैक करें।">
+<meta name="keywords" content="examoro, examoro pyq, examoro analytics, RRB Group D PYQ analysis">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1b3d;--mute:#5a6783;--line:#e4e9f2;--blue:#1d4ed8;--soft:#f4f7fd;--red:#d62828;box-sizing:border-box}
+*{box-sizing:border-box}html{scroll-behavior:auto}
+body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+img{max-width:100%;-webkit-user-drag:none;pointer-events:none}
+a{color:var(--blue)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+section{scroll-margin-top:84px;padding:46px 0}
+.bar{background:#fff;border-bottom:1px solid var(--line);text-align:center;padding:10px 12px;font-family:'Noto Sans Devanagari','Mukta',Arial,sans-serif;font-size:clamp(23px,6.2vw,38px);font-weight:800;line-height:1.35;white-space:nowrap;overflow:hidden}.bar i{display:inline-block;width:clamp(14px,5vw,60px);height:3px;vertical-align:middle;margin:0 10px;border-radius:3px;background:linear-gradient(90deg,#0b0b0b,#d62828)}.bar .c1{color:#0b0b0b}.bar .c2{color:#d62828}
+
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:12px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand img{height:44px;width:44px}
+.brand b{font-size:24px;font-weight:900;letter-spacing:3px}.brand b i{font-style:normal;color:var(--red)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+nav a{display:block;padding:9px 13px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:14px}
+nav a:hover{background:var(--soft);color:var(--blue)}
+#mb{display:none;background:var(--soft);border:0;width:42px;height:42px;border-radius:10px;font-size:20px;cursor:pointer;color:var(--ink)}
+.btn{display:inline-block;border:0;border-radius:10px;padding:13px 24px;font:inherit;font-weight:bold;cursor:pointer;text-decoration:none;text-align:center}
+.red{background:var(--red);color:#fff;box-shadow:0 8px 18px rgba(214,40,40,.28)}.red:hover{filter:brightness(1.07)}
+.line{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.wa{background:#25d366;color:#fff}
+:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+.hero{padding:44px 0 36px;background:#fff}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.chip{display:inline-block;background:#e6eeff;color:var(--blue);font-weight:bold;font-size:12px;letter-spacing:.8px;padding:6px 14px;border-radius:20px}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.12;margin:14px 0 12px;font-weight:900}h1 em{font-style:normal;color:var(--blue)}
+.lead{color:var(--mute);font-size:17px;max-width:480px;margin:0 0 22px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.price{font-size:30px;font-weight:900}.price s{font-size:0}
+.stage{perspective:1000px;display:flex;justify-content:center;align-items:center;padding:38px 20px;border-radius:26px;background:#fff}
+.b3{width:min(210px,54vw);position:relative}.b3::after{content:"";position:absolute;left:12%;right:4%;bottom:-2%;height:7%;background:radial-gradient(ellipse at center,rgba(15,27,61,.28),transparent 70%);filter:blur(7px);z-index:-1}
+.b3 img{width:100%;display:block}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-6px}
+.trust div{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff;box-shadow:0 6px 18px rgba(15,27,61,.05)}
+.trust b{display:block}.trust small{color:var(--mute)}
+h2{font-size:28px;margin:0 0 6px;font-weight:900}.sub{color:var(--mute);margin:0 0 22px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.cat{background:#fff;border:1px solid #d5ddec;color:var(--ink);border-radius:20px;padding:8px 16px;font:inherit;font-weight:bold;font-size:13px;cursor:pointer}
+.cat.on,.cat:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+#list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff;box-shadow:0 8px 24px rgba(15,27,61,.07);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:8px}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(15,27,61,.13)}
+.card img{display:block;width:100%}
+.card h3{font-size:15px;margin:6px 0 0}.card p{margin:0;font-size:13px;color:var(--mute)}
+.card .btn{padding:10px;font-size:14px;width:100%}
+#msg{display:none;background:#fff7e0;border-radius:10px;padding:14px;color:#6b5200;margin-top:14px}
+.alt{background:var(--soft)}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:0 16px}
+summary{cursor:pointer;font-weight:bold;padding:15px 0}
+details>div{padding-bottom:16px}
+.nr{background:#fdeaea;color:#a01616;font-weight:bold;border-radius:8px;padding:10px 14px;margin-bottom:10px}
+footer{background:var(--ink);color:#c9d3ec;padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));font-size:13px;text-align:center}
+footer a{color:#7ee7a8}.strip{margin-top:14px;color:#fff;font-weight:bold;font-size:15px}
+#md{position:fixed;inset:0;z-index:60;background:rgba(10,18,40,.8);display:none;align-items:center;justify-content:center;padding:14px}
+#md.on{display:flex}#md div{background:#fff;border-radius:14px;max-width:520px;width:100%;max-height:90vh;overflow:auto;padding:14px}
+@media(max-width:760px){
+#mb{display:block}nav{display:none;position:absolute;left:0;right:0;top:68px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 14px 24px rgba(15,27,61,.1)}nav.on{display:block}nav ul{flex-direction:column;padding:8px 14px}
+.hg{grid-template-columns:1fr}.stage{order:-1}.trust{grid-template-columns:1fr}#list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:10px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* what's inside */
+.stage{padding:22px 20px}
+.fx{display:grid;grid-template-columns:1fr 150px 1fr;gap:10px;align-items:stretch;max-width:760px;margin:0 auto}
+.fx .col{display:flex;flex-direction:column;justify-content:space-around;gap:10px}
+.fx .bk{display:flex;align-items:center}.fx .bk img{width:100%;display:block}
+.fi{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 10px;box-shadow:0 6px 16px rgba(15,27,61,.06)}
+.fi div{flex:1;min-width:0}.fi b{display:block;font-size:14px;line-height:1.25}.fi small{display:block;font-size:12px;color:var(--mute);line-height:1.3;margin-top:2px}
+.fi.l div{text-align:right}
+.fi i{flex:0 0 26px;height:2px;background:var(--red);position:relative}
+.fi.l i::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:8px solid var(--red);border-right:0}
+.fi.r i::after{content:"";position:absolute;left:-1px;top:-4px;border:5px solid transparent;border-right:8px solid var(--red);border-left:0}
+.fi em{font-style:normal;font-weight:900;color:var(--blue);font-size:13px}
+@media(max-width:600px){.fx{grid-template-columns:1fr 112px 1fr;gap:6px}.fi{padding:7px 6px;gap:4px;border-radius:10px}.fi b{font-size:11.5px}.fi small{display:none}.fi i{flex-basis:12px}.fi em{display:none}}
+
+.soc{display:flex;flex-wrap:wrap;gap:12px}
+.soc a{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:bold;text-decoration:none;color:var(--ink);box-shadow:0 6px 16px rgba(15,27,61,.06);transition:transform .15s,box-shadow .15s}
+.soc a:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(15,27,61,.12)}
+.soc a::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+
+.ss{background:#ffd23f;color:#141414;font-weight:800;font-style:italic;font-size:13px;line-height:1.15;padding:5px 11px;border-radius:7px;transform:rotate(-3deg);box-shadow:0 2px 0 rgba(0,0,0,.14);letter-spacing:.2px;white-space:nowrap}
+@media(max-width:520px){.ss{font-size:10px;padding:4px 7px;letter-spacing:0}.ss span{display:block}.brand b{font-size:19px;letter-spacing:2px}.brand{gap:7px}.brand img{height:38px;width:38px}}
+
+.cv{position:relative}.lk{position:absolute;inset:0;background:rgba(10,18,40,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;font-weight:800;letter-spacing:1.5px;font-size:13px}
+.card details{border:0;background:none;padding:0;margin:0}.card.soon summary{padding:6px 0;font-size:13px;color:var(--blue)}.card.soon ul{margin:0 0 8px;padding-left:18px;color:var(--mute);font-size:12.5px;line-height:1.5}
+.card .btn[disabled]{cursor:not-allowed}
+
+
+.two{display:flex;gap:6px}.two .btn{flex:1;min-width:0;padding:9px 3px;font-size:11px;line-height:1.15;white-space:normal;text-align:center;display:flex;align-items:center;justify-content:center;gap:4px}.card .btn.line[disabled]{opacity:.7}
+
+#list{align-items:stretch}.card{height:100%}
+.cv img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover}
+.card.soon .cv img{border-radius:4px;box-shadow:0 8px 18px rgba(15,27,61,.3)}.card.soon .lk{border-radius:4px}
+.card h3{min-height:3.2em}.card p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:4.8em}
+.card .price{font-size:22px;font-weight:900}.card .two{margin-top:auto}
+.card details summary{padding:6px 0;font-size:13px;color:var(--blue)}.card ul{margin:0 0 8px;padding-left:18px;color:var(--mute);font-size:12.5px;line-height:1.5}
+.card .two{flex-direction:column;gap:8px}.card .two .btn{flex:none;width:100%;padding:11px 8px;font-size:14px;white-space:nowrap;line-height:1.2}
+.card.soon .cv{transform:scale(.965)}
+
+/* official icons */
+.trust>div{display:flex;align-items:center;gap:12px}
+.ti{flex:0 0 44px;height:44px;border-radius:12px;background:#eaf1ff;color:var(--blue);display:grid;place-items:center}
+.tx b,.tx small{display:block}
+.soc a::before{display:none}
+.soc .ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:#f1f5fb;background:color-mix(in srgb,var(--c) 12%,#fff);color:var(--c)}
+.btn svg{vertical-align:-4px;margin-right:4px}.two .btn svg{margin:0}
+summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:0 0 8px;width:8px;height:8px;border-right:2px solid var(--mute);border-bottom:2px solid var(--mute);transform:rotate(45deg);transition:transform .2s;margin-top:-3px}
+details[open]>summary::after{transform:rotate(-135deg);margin-top:3px}
+.card details summary{justify-content:flex-start}.card details summary::after{margin-left:4px}
+/* compact hero */
+.hero{padding:22px 0 18px}.hg{gap:14px}.stage{padding:6px 20px}.b3{width:min(150px,40vw)}
+.chip{font-size:11px;padding:5px 12px}h1{font-size:clamp(24px,6.4vw,34px);margin:10px 0 8px}.lead{font-size:14px;margin:0 0 14px}
+.hero .btn{padding:10px 18px;font-size:14px}.hero .price{font-size:24px}
+@media(min-width:761px){.b3{width:200px}h1{font-size:38px}}
+/* compact social */
+#social{padding:28px 0}#social h2{font-size:22px}#social .sub{font-size:13px;margin-bottom:14px}
+.soc{gap:8px}.soc a{gap:7px;padding:6px 12px 6px 6px;border-radius:10px;font-size:13px;box-shadow:0 3px 10px rgba(15,27,61,.06)}
+.soc .ic{width:28px;height:28px;border-radius:8px}.soc .ic svg{width:15px;height:15px}
+.soc{gap:6px;flex-wrap:nowrap}.soc a{gap:5px;padding:5px 9px 5px 5px;font-size:12.5px;white-space:nowrap}
+@media(max-width:380px){.soc{gap:5px}.soc a{font-size:12px;padding:4px 7px 4px 4px;gap:4px}.soc .ic{width:24px;height:24px}.soc .ic svg{width:13px;height:13px}}
+</style></head><body>
+<div class="bar" lang="hi"><i></i><span class="c1">सभी मत पढ़ो,</span> <span class="c2">सही पढ़ो!</span><i></i></div>
+<header><div class="wrap hd">
+<a class="brand" href="#home"><img src="data:image/png;base64,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
