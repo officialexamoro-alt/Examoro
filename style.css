@@ -1,8 +1,7 @@
 /* ==========================================================================
-   EXAMORO™ COMPLETE RESPONSIVE WEB-APP STYLESHEET (style.css)
+   EXAMORO™ PERFECT RESPONSIVE ACCORDING TO IMAGE 1 (style.css)
    ========================================================================== */
 
-/* ---------- 🎨 COLOR VARIABLES (पॉइंट 1 और 2) ---------- */
 :root {
   --primary: #075878;       /* प्रीमियम भरोसेमंद रॉयल ब्लू */
   --primary-dark: #05415e;
@@ -28,24 +27,6 @@
   --radius: 16px;
   --radius-small: 10px;
   --transition: 0.25s ease;
-}
-
-/* ---------- 🌙 DYNAMIC DARK THEME (पॉइंट 20 - डार्क मोड मेमोरी रेडी) ---------- */
-body.dark-theme {
-  --background: #0b1528;
-  --surface: #13223c;
-  --surface-soft: #16294a;
-
-  --text: #f3f6f8;
-  --text-light: #a0aec0;
-  --border: #223452;
-
-  --primary-light: #121f38;
-  --accent-light: #3c1920;
-  --success-light: #142f21;
-
-  --shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* ---------- 🚨 ANTI-PIRACY SECURITY PROTECTION (पॉइंट 21) ---------- */
@@ -90,7 +71,7 @@ a:hover {
   color: var(--primary-dark);
 }
 
-/* ---------- ANNOUNCEMENT TOP BAR (पॉइंट 7) ---------- */
+/* ---------- ANNOUNCEMENT TOP BAR ---------- */
 .announcement {
   background: var(--navy);
   color: white;
@@ -110,14 +91,13 @@ a:hover {
   opacity: 0.5;
 }
 
-/* ---------- NAVIGATION NAVBAR (पॉइंट 4, 8, 10, 11) ---------- */
+/* ---------- NAVIGATION NAVBAR (IMAGE 1 EXACT DESIGN) ---------- */
 header {
   position: sticky;
   top: 0;
   z-index: 100;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  transition: background var(--transition);
 }
 
 .navbar {
@@ -146,9 +126,6 @@ header {
   color: var(--primary);
   letter-spacing: -0.5px;
   line-height: 1.1;
-}
-body.dark-theme .brand .logo {
-  color: white;
 }
 .brand .logo span {
   color: var(--accent);
@@ -190,11 +167,8 @@ body.dark-theme .brand .logo {
   place-items: center;
   transition: var(--transition);
 }
-.icon-btn:hover {
-  background: var(--border);
-}
 
-/* ---------- MOBILE MENU DRAWER (पॉइंट 12, 13) ---------- */
+/* ---------- MOBILE MENU DRAWER ---------- */
 .drawer-overlay {
   position: fixed;
   inset: 0;
@@ -250,7 +224,7 @@ body.dark-theme .brand .logo {
   font-weight: 500;
 }
 
-/* ---------- APP SEARCH & BROWSE BAR ---------- */
+/* ---------- APP BROWSE BAR ---------- */
 .browse-section {
   transition: background var(--transition);
 }
@@ -264,7 +238,7 @@ body.dark-theme .brand .logo {
   display: grid !important;
 }
 
-/* ---------- E-BOOK STORE STRUCTURE (MATCHING YOUR SCREENSHOT) ---------- */
+/* ---------- E-BOOK BOOK SLOT SIZE & STYLE (IMAGE 1 TARGET) ---------- */
 .books-section {
   padding: 30px 12px;
 }
@@ -272,31 +246,26 @@ body.dark-theme .brand .logo {
   text-align: center;
   margin-bottom: 25px;
 }
-.eyebrow {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 800;
-  color: var(--accent);
-  background: var(--accent-light);
-  padding: 4px 8px;
-  border-radius: 4px;
-  letter-spacing: 1px;
-}
 
 .books-grid {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 480px;
+  max-width: 440px; /* पहली इमेज के अनुसार स्लॉट का एकदम सटीक साइज */
   margin: auto;
   gap: 20px;
 }
 
 .book-card {
-  transition: transform var(--transition);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  padding-bottom: 20px;
 }
 
 .book-art {
-  background: var(--surface-soft);
+  background: #f8fafc;
   padding: 25px;
   display: grid;
   place-items: center;
@@ -304,13 +273,12 @@ body.dark-theme .brand .logo {
 }
 .book-cover {
   width: 100%;
-  max-height: 340px;
+  max-height: 340px; /* पहली इमेज के अनुसार फोटो का परफेक्ट साइज */
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* PREMIUM LOOK DETAILS CONFIGURATION (EXACTLY LIKE IMAGE) */
 .book-info {
   padding: 20px 16px;
 }
@@ -341,6 +309,7 @@ body.dark-theme .brand .logo {
 .buy-button:hover {
   background: #cc1420;
 }
+
 .payment-note {
   font-size: 12px;
   color: var(--text-light);
@@ -363,9 +332,6 @@ body.dark-theme .brand .logo {
   font-weight: 800;
   margin: 12px 0 6px;
   color: var(--primary);
-}
-body.dark-theme .book-title {
-  color: #ffffff;
 }
 .description {
   color: var(--text-light);
@@ -398,9 +364,6 @@ body.dark-theme .book-title {
   color: var(--text);
   transition: var(--transition);
 }
-.btn-outline:hover {
-  background: var(--border);
-}
 
 /* COMING SOON PLATFORMS GRID */
 .coming-section {
@@ -429,11 +392,6 @@ body.dark-theme .book-title {
   border-radius: 12px;
   text-align: center;
   box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-.category-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
 }
 .category-card h3 {
   font-size: 14px;
@@ -445,7 +403,7 @@ body.dark-theme .book-title {
   font-size: 11px;
 }
 
-/* ⭐ ROBOTIC FREE INDIAN REVIEWS */
+/* ⭐ ASPIRANTS REVIEWS */
 .reviews-section {
   background: var(--panel-bg);
   padding: 20px 15px;
@@ -499,4 +457,56 @@ body.dark-theme .book-title {
 }
 .accordion-item {
   background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.accordion-item summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+}
+.accordion-content {
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* CONTACT LINK CARDS */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 450px;
+  margin: auto;
+}
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  display: block;
+  color: var(--text);
+}
+
+/* SOCIAL MEDIA LINKS BUTTONS */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+.social-button {
+  display: block;
+  padding: 13px;
+  border-radius: 10px;
+  font-weight: bold;
    
