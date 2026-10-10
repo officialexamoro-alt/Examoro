@@ -1068,149 +1068,19 @@ footer {
 
       <h2>Ho
             <!-- Bachi hui privacy policy text aur structural tags -->
-      w to use your information safely. We only use it to process your orders.
-      </p>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER START -->
-<footer>
-  <div class="footer-inner">
-    <img class="footer-logo" src="logo.png" alt="EXAMORO Logo">
-    <div class="footer-tagline">PLAN SMART • STUDY BETTER • CRACK EXAM</div>
-    <div class="footer-links">
-      <a href="#home" onclick="showHome()">🏠 Home</a>
-      <a href="#about" onclick="showPage('about')">ℹ️ About Us</a>
-      <a href="#privacy" onclick="showPage('privacy')">🔒 Privacy Policy</a>
-    </div>
-    <p class="disclaimer">EXAMORO is an independent educational brand and not affiliated with any government organization.</p>
-    <p class="copyright">© 2026 EXAMORO. All Rights Reserved.</p>
-  </div>
-</footer>
-
-<!-- 🛠️ JAVASCRIPT LOGIC FOR MENU AND SEARCH -->
-<script>
-  const menuOpenBtn = document.getElementById('menuOpen');
-  const menuCloseBtn = document.getElementById('menuClose');
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuDrawer = document.getElementById('menuDrawer');
-  const browseButton = document.getElementById('browseButton');
-  const categoryList = document.getElementById('categoryList');
-  const searchForm = document.getElementById('searchForm');
-  const bookSearchInput = document.getElementById('bookSearch');
-  const noResultsMessage = document.getElementById('noResults');
-
-  // 1. MENU OPEN & CLOSE
-  function openMenu() {
-    menuDrawer.classList.add('open');
-    menuOverlay.classList.add('open');
-    menuOpenBtn.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeMenu() {
-    menuDrawer.classList.remove('open');
-    menuOverlay.classList.remove('open');
-    menuOpenBtn.setAttribute('aria-expanded', 'false');
-  }
-
-  if (menuOpenBtn) menuOpenBtn.addEventListener('click', openMenu);
-  if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
-  if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
-
-  // 2. SHOW HOME PAGE
-  function showHome() {
-    const infoPages = document.querySelectorAll('.info-page');
-    infoPages.forEach(page => page.classList.remove('active'));
-
-    const mainHome = document.getElementById('home');
-    if (mainHome) mainHome.style.display = 'block';
-
-    const bookCards = document.querySelectorAll('.book-card');
-    bookCards.forEach(card => {
-      if (!card.hasAttribute('hidden')) card.style.display = 'block';
-    });
-
-    if (noResultsMessage) noResultsMessage.style.display = 'none';
-    if (bookSearchInput) bookSearchInput.value = '';
-    closeMenu();
-  }
-
-  // 3. SHOW INFO PAGES (About, Privacy etc.)
-  function showPage(pageId) {
-    const mainHome = document.getElementById('home');
-    if (mainHome) mainHome.style.display = 'none';
-
-    const infoPages = document.querySelectorAll('.info-page');
-    infoPages.forEach(page => page.classList.remove('active'));
-
-    const targetPage = document.getElementById(pageId);
-    if (targetPage) {
-      targetPage.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    closeMenu();
-  }
-
-  // 4. BROWSE DROPDOWN
-  if (browseButton && categoryList) {
-    browseButton.addEventListener('click', () => {
-      categoryList.classList.toggle('open');
-    });
-  }
-
-  // 5. SEARCH FILTER
-  function performSearch() {
-    const filter = bookSearchInput.value.toLowerCase().trim();
-    const bookCards = document.querySelectorAll('.book-card');
-    let visibleCount = 0;
-
-    bookCards.forEach(card => {
-      if (!card.hasAttribute('hidden')) {
-        const searchKeywords = card.getAttribute('data-search') || '';
-        const titleText = card.querySelector('.book-title')?.textContent || '';
-        const combinedText = (searchKeywords + ' ' + titleText).toLowerCase();
-
-        if (combinedText.includes(filter)) {
-          card.style.display = 'block';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-        }
-      }
-    });
-
-    if (noResultsMessage) {
-      noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
-    }
-  }
-
-  if (bookSearchInput) bookSearchInput.addEventListener('input', performSearch);
-  if (searchForm) {
-    searchForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      performSearch();
-    });
-  }
-</script>
-
-</body>
-</html>
-        <!-- Bachi hui privacy policy text aur structural tags -->
-      w to use your information safely. We only use it to process your orders.
+                w to use your information safely. We only use it to process your orders.
       </p>
     </div>
   </section>
 
   <!-- 4. 🆘 HELPLINE SECTION -->
   <section class="info-page" id="helpline">
-    <div class="info-content" style="text-align: center; padding: 20px 10px;">
+    <div class="info-content" style="text-align: center; padding: 30px 10px;">
       <h1 style="color: var(--navy); margin-bottom: 15px;">Helpline / WhatsApp Support</h1>
       <div style="font-size: 60px; margin-bottom: 15px;">💬</div>
       <p style="font-size: 16px; font-weight: bold; color: #202b3c;">Need Help? / सहायता चाहिए?</p>
-      <p style="max-width: 500px; margin: 5px auto 20px; color: var(--muted);">
-        For any questions regarding your order or e-book access, please click below to chat with us on WhatsApp.<br><br>
+      <p style="max-width: 500px; margin: 5px auto 20px; color: var(--muted); font-size: 14px; line-height: 1.6;">
+        For any questions regarding your order or e-book access, please click below to chat with us directly on WhatsApp.<br><br>
         अपने आर्डर या ई-बुक एक्सेस से जुड़े किसी भी सवाल के लिए कृपया नीचे दिए गए बटन पर क्लिक करके सीधे हमसे व्हाट्सएप पर चैट करें।
       </p>
       <a href="https://wa.me." 
@@ -1244,7 +1114,7 @@ footer {
   <section class="info-page" id="contact">
     <div class="info-content" style="text-align: center; padding: 30px 10px;">
       <h1 style="color: var(--navy); margin-bottom: 15px;">Contact Us / हमसे संपर्क करें</h1>
-      <p style="color: var(--muted); max-width: 500px; margin: 0 auto 25px;">
+      <p style="color: var(--muted); max-width: 500px; margin: 0 auto 25px; font-size: 14px; line-height: 1.6;">
         If you have any questions, feel free to send us an email.<br><br>
         यदि आपके पास कोई प्रश्न है, तो हमें ईमेल भेज सकते हैं।
       </p>
@@ -1259,11 +1129,11 @@ footer {
   <section class="info-page" id="social-media">
     <div class="info-content" style="text-align: center; padding: 30px 10px;">
       <h1 style="color: var(--navy); margin-bottom: 25px;">Follow Us on Social Media</h1>
-      <div style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
-        <a href="https://instagram.com" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; background: #fdf0f2; color: #c32aa3; padding: 14px 22px; border-radius: 12px; font-weight: bold; text-decoration: none; border: 1px solid #f9dadf;">
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <a href="https://instagram.com" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; background: #fdf0f2; color: #c32aa3; padding: 14px 24px; border-radius: 12px; font-weight: bold; text-decoration: none; border: 1px solid #f9dadf;">
           📸 Instagram
         </a>
-        <a href="https://youtube.com" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; background: #fff0f1; color: #ff0000; padding: 14px 22px; border-radius: 12px; font-weight: bold; text-decoration: none; border: 1px solid #ffd6d8;">
+        <a href="https://youtube.com" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; background: #fff0f1; color: #ff0000; padding: 14px 24px; border-radius: 12px; font-weight: bold; text-decoration: none; border: 1px solid #ffd6d8;">
           📺 YouTube
         </a>
       </div>
@@ -1287,7 +1157,7 @@ footer {
   </div>
 </footer>
 
-<!-- 🛠️ JAVASCRIPT FOR MENU AND NAVIGATION (THE WORKING ONE) -->
+<!-- 🛠️ CLEAN JAVASCRIPT WITHOUT ANY BR TAGS -->
 <script>
   const menuOpenBtn = document.getElementById('menuOpen');
   const menuCloseBtn = document.getElementById('menuClose');
@@ -1299,17 +1169,21 @@ footer {
   const bookSearchInput = document.getElementById('bookSearch');
   const noResultsMessage = document.getElementById('noResults');
 
-  // 1. OPEN & CLOSE MENU
+  // 1. MENU OPEN & CLOSE
   function openMenu() {
-    menuDrawer.classList.add('open');
-    menuOverlay.classList.add('open');
-    menuOpenBtn.setAttribute('aria-expanded', 'true');
+    if (menuDrawer && menuOverlay) {
+      menuDrawer.classList.add('open');
+      menuOverlay.classList.add('open');
+      if (menuOpenBtn) menuOpenBtn.setAttribute('aria-expanded', 'true');
+    }
   }
 
   function closeMenu() {
-    menuDrawer.classList.remove('open');
-    menuOverlay.classList.remove('open');
-    menuOpenBtn.setAttribute('aria-expanded', 'false');
+    if (menuDrawer && menuOverlay) {
+      menuDrawer.classList.remove('open');
+      menuOverlay.classList.remove('open');
+      if (menuOpenBtn) menuOpenBtn.setAttribute('aria-expanded', 'false');
+    }
   }
 
   if (menuOpenBtn) menuOpenBtn.addEventListener('click', openMenu);
@@ -1338,7 +1212,7 @@ footer {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // 3. SHOW INFOPAGES
+  // 3. SHOW ALL INFO PAGES DYNAMICALLY
   function showPage(pageId) {
     const mainHome = document.getElementById('home');
     if (mainHome) mainHome.style.display = 'none';
@@ -1365,7 +1239,7 @@ footer {
     });
   }
 
-  // 5. SEARCH FILTER
+  // 5. SEARCH FILTER ENGINE
   function performSearch() {
     const filter = bookSearchInput.value.toLowerCase().trim();
     const bookCards = document.querySelectorAll('.book-card');
