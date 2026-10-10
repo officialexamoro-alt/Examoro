@@ -831,29 +831,28 @@ footer {
   </div>
 
   <div class="drawer-links">
-    <a href="#home" onclick="showHome()">🏠 Home</a>
-    <a href="#ebooks" onclick="showHome()">📚 All E-books</a>
+  <!-- 1. Home Page & All E-books (Problem 1 Solved) -->
+  <a href="#home" onclick="showHome()">🏠 Home Page</a>
+  <a href="#ebooks" onclick="showHome()">📚 All E-books</a>
 
-        <details>
-      <summary>📚 E-books Category</summary>
-      <a href="#smart-series" onclick="showHome()">📘 Smart Series E-books</a>
-      <a href="#rrb-books" onclick="showHome()">🚆 RRB Group D</a>
-    </details>
+  <!-- 2. E-books Categories (Problem 2 Solved) -->
+  <details>
+    <summary>📚 E-books Category</summary>
+    <a href="#ebooks" onclick="triggerCategoryRoute('smart series')">📘 Smart Series E-books</a>
+    <a href="#ebooks" onclick="triggerCategoryRoute('rrb group d')">🚆 RRB Group D</a>
+  </details>
 
-    <hr class="drawer-divider">
+  <hr class="drawer-divider">
 
-    <a href="#about" onclick="showPage('about')">ℹ️ About Us</a>
-
-    <a href="#helpline" onclick="showHome()">🆘 Helpline / WhatsApp Support</a>
-
-    <a href="#privacy" onclick="showPage('privacy')">🔒 Privacy Policy</a>
-
-    <a href="#refund" onclick="showPage('refund')">💳 Refund Policy</a>
-
-    <a href="#contact" onclick="showHome()">📧 Contact Us</a>
-
-    <a href="#social-media" onclick="showHome()">🌐 Social Media</a>
+  <!-- Baki ke options jo hum ek-ek karke aage badlenge -->
+  <a href="#about" onclick="showPage('about')">ℹ️ About Us</a>
+  <a href="#helpline" onclick="showPage('helpline')">🆘 Helpline / WhatsApp Support</a>
+  <a href="#privacy" onclick="showPage('privacy')">🔒 Privacy Policy</a>
+  <a href="#refund" onclick="showPage('refund')">💳 Refund Policy</a>
+  <a href="#contact" onclick="showPage('contact')">📧 Contact Us</a>
+  <a href="#social-media" onclick="showPage('social-media')">🌐 Social Media</a>
   </div>
+  
 
   <div class="drawer-support">
     <strong>Need Help?</strong>
