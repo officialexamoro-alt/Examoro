@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+  <!-- 🔍 GOOGLE SEO & META DETAILS -->
+  <title>EXAMORO™ | Smart Study Store</title>
+  <meta name="description" content="भारत की सभी प्रतियोगी परीक्षाओं के पिछले 3 से 5 साल के पेपर्स का सटीक टॉपिक-वाइज और ट्रेंड एनालिसिस। EXAMORO Smart Study Series के साथ परीक्षा क्रैक करें। Plan Smart, Study Better, Crack Exam.">
+  <meta name="keywords" content="examoro, examoro pyq, examoro analytics, pyq analyse, rrb group d analytics, smart study series">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://googleapis.com">
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet Linked -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement">
+  🔥 EXAMORO™ Smart Store
+  <span>•</span>
+  <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
+    🟢 WhatsApp Support: 9358915420
+  </a>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a href="#home" class="brand" onclick="showHome()">
+    <span class="logo">E<span>X</span>AMORO<sup>™</sup></span>
+    <small>PLAN SMART • STUDY BETTER • CRACK EXAM</small>
+  </a>
+
+  <nav class="desktop-menu">
+    <a href="#home" onclick="showHome()">Home</a>
+    <a href="#books" onclick="showHome()">E-books</a>
+    <a href="#about" onclick="showPage('about')">About Us</a>
+    <a href="#contact" onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+    <button id="cartButton" class="icon-btn" onclick="showHome()" aria-label="View books">🛒</button>
+    <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<!-- MOBILE MENU DRAWER SHIELD -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-header">
+    <strong>EXAMORO™ Menu</strong>
+    <button id="closeDrawer" class="icon-btn" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="drawer-links">
+    <a href="#home" onclick="showHome()">🏠 Home Page</a>
+
+    <details>
+      <summary>📚 All E-books Category</summary>
+      <a href="#books" onclick="triggerCategoryRoute('smart series')">↳ Smart Series E-books</a>
+      <a href="#books" onclick="triggerCategoryRoute('rrb group d')">↳ RRB Group D</a>
+    </details>
+
+    <a href="#about" onclick="showPage('about')">ℹ️ About Us Hub</a>
+    <a href="#contact" onclick="showPage('contact')">📧 Contact Us</a>
+    <a href="#social" onclick="showPage('social')">🌐 Social Media</a>
+    <a href="#" id="pwaInstall" style="display:none; color:var(--success); padding: 14px 20px; font-weight: bold;">📥 Install Web App</a>
+  </div>
+</aside>
+
+<!-- MAIN INTERFACE OVERVIEW -->
+<main id="home">
+
+  <!-- HERO SECTION -->
+  <section class="hero section">
+    <div class="hero-content">
+      <span class="eyebrow">✨ SMART PREPARATION STARTS HERE</span>
+      <h1>
+        Study Smart.<br>
+        <span>Prepare Better.</span><br>
+        Crack Your Goal.
+      </h1>
+      <p>
+        Focused exam preparation e-books to help you study with direction, revise smarter and stay organised.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#books" class="btn btn-red" onclick="showHome()">Explore E-books →</a>
+        <a href="#about" class="btn btn-outline" onclick="showPage('about')">Know About Us</a>
+      </div>
+
+      <div class="hero-features">
+        <div class="feature">
+          <span class="soft-icon blue-bg">📘</span>
+          <div>
+            <strong>Focused Content</strong>
+            <small>Study with direction</small>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="soft-icon green-bg">🎯</span>
+          <div>
+            <strong>Smart Approach</strong>
+            <small>Learn what matters</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS BOOK MOCKUP LAYOUT -->
+    <div class="hero-art">
+      <div class="floating-note note-top">
+        ⚡ <span><b>Smart Series</b><small>Learn with focus</small></span>
+      </div>
+
+      <div class="hero-book">
+        <div class="book-brand">EXAMORO™</div>
+        <div class="book-label">RRB GROUP D</div>
+        <h2>PYQ DATA<br><span>ANALYSIS</span></h2>
+        <div class="book-line"></div>
+        <p>FOCUSED PRACTICE<br>SMARTER REVISION</p>
+        <div class="book-symbols">✦　▤　✓</div>
+        <small>PLAN SMART • STUDY BETTER</small>
+      </div>
+
+      <div class="floating-note note-bottom">
+        💰 <span><b>Budget Friendly</b><small>Book price just ₹39</small></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits section">
+    <div class="benefit-card">
+      <span class="soft-icon blue-bg">📖</span>
+      <div>
+        <h3>Clear & Focused</h3>
+        <p>Keep your preparation organised.</p>
+      </div>
+    </div>
+    <div class="benefit-card">
+      <span class="soft-icon red-bg">💡</span>
+      <div>
+        <h3>Smart Learning</h3>
+        <p>Make your study time count.</p>
+      </div>
+    </div>
+    <div class="benefit-card">
+      <span class="soft-icon green-bg">📱</span>
+      <div>
+        <h3>Digital Access</h3>
+        <p>Study on your preferred device.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-BOOK CATALOG SECTION -->
+  <section class="section books-section" id="books">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">📚 OUR COLLECTION</span>
+        <h2>Choose Your <span>Smart Study</span></h2>
+        <p>Start with our first Smart Series e-book.</p>
+      </div>
+      <span class="series-badge">📘 Smart Series</span>
+    </div>
+
+    <div class="books-grid" id="booksGrid">
+      <article class="book-card" id="rrb-book" data-search="rrb group d railway pyq previous year question data analysis smart series weightage chart strategy blueprint syllabus analytics">
+        <div class="book-art">
+          <span class="top-badge">SMART SERIES</span>
+          <div class="product-book">
+            <div class="product-brand">EXAMORO™</div>
+            <span class="product-exam">RRB GROUP D</span>
+            <h2>PYQ DATA<br><span>ANALYSIS</span></h2>
+            <div class="book-line"></div>
+            <p>PLAN SMART • STUDY BETTER</p>
+            <div class="book-symbols">✦　▤　✓</div>
+          </div>
+        </div>
+
+        <div class="book-info">
+          <span class="category-label">RRB GROUP D • E-BOOK</span>
+          <h2>RRB Group D — PYQ Data Analysis</h2>
+          <p class="description">
+            A focused digital study resource to help organise your RRB Group D previous-year-question analysis and revision.
+          </p>
+
+          <div class="book-points">
+            <span>✅ Digital e-book</span>
+            <span>✅ Topic-focused revision</span>
+            <span>✅ Budget-friendly price</span>
+            <span>✅ Index preview available</span>
+          </div>
+
+          <div class="price-row">
+            <div>
+              <strong class="price">₹39</strong>
+              <small>One-time price</small>
+            </div>
+            <span class="price-badge">SMART PRICE</span>
+          </div>
+
+          <div class="book-buttons">
+            <!-- Razorpay Gateway Automatic Link Trigger -->
+            <button class="btn btn-red" id="buyNow" onclick="window.open('https://rzp.io')">Buy Now →</button>
+            <button class="btn btn-outline" id="viewIndex">📑 View Full Index</button>
+          </div>
+          <p class="payment-note">
+            Instant digital delivery file access after completing your secure checkout via Razorpay.
+          </p>
+        </div>
+      </article>
+
+      <!-- HIDDEN INDEX ARCHITECTURES FOR DYNAMIC SEARCH FILTER -->
+      <article class="book-card" id="ssc-category" data-search="ssc cgl chsl mts gd" hidden></article>
+      <article class="book-card" id="bank-category" data-search="banking bank po clerk sbi" hidden></article>
+      <article class="book-card" id="upsc-category" data-search="upsc state exams" hidden></article>
+      <article class="book-card" id="police-category" data-search="police defence army" hidden></article>
+    </div>
+
+    <!-- COMING SOON ENGINE PANEL -->
+    <div class="coming-section" id="comingSoonSection">
+      <span class="eyebrow">🚀 MORE ON THE WAY</span>
+      <h2>Coming <span>Soon</span></h2>
+      <div class="category-grid">
+        <div class="category-card" onclick="triggerCategoryRoute('ssc')">
+          <span class="soft-icon lavender-bg">🧠</span>
+          <h3>SSC Exams</h3>
+          <small>Coming Soon</small>
+        </div>
+        <div class="category-card" onclick="triggerCategoryRoute('banking')">
+          <span class="soft-icon peach-bg">🏦</span>
+          <h3>Banking</h3>
+          <small>Coming Soon</small>
+        </div>
+        <div class="category-card" onclick="triggerCategoryRoute('upsc')">
+          <span class="soft-icon blue-bg">🎓</span>
+          <h3>UPSC</h3>
+          <small>Coming Soon</small>
+        </div>
+        <div class="category-card" onclick="triggerCategoryRoute('police')">
+          <span class="soft-icon green-bg">👮</span>
+          <h3>Police Exams</h3>
+          <small>Coming Soon</small>
+        </div>
+      </div>
+    </div>
+    
+    <p id="noResults" style="display:none; text-align:center; padding:25px; color:var(--text-light); font-weight:bold;">
+      New smart e-books for this category are coming soon! (जल्द आ रही है)
+    </p>
+  </section>
+</main>
+
+<!-- ℹ️ ALL-IN-ONE COMPACT ABOUT US HUB DYNAMIC SECTION -->
+<section class="info-page section" id="about">
+  <div class="section-heading">
+    <span class="eyebrow">EXAMORO INFORMATION HUB</span>
+    
